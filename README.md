@@ -22,9 +22,7 @@ The project utilizes datasets from NYC Open Data, including:
 
 # Project Structure
 
-Inspired by the structure seen in the [NYC
-Sentinel](https://github.com/Phani-VarmaG/NYC_Sentinel) repository, the
-project is organized as follows:
+The project is organized as follows:
 
     ├── data/
     │   ├── NYPD_Shooting_Incident_Data__Historic__20240507.csv
@@ -192,29 +190,29 @@ machine learning models.
 
 # Setup and Execution
 
-## 1. Clone the Repository {#clone-the-repository .unnumbered}
+## 1. Clone the Repository
 
     git clone https://github.com/Phani-VarmaG/NYC_Sentinel.git
     cd NYC_Sentinel
 
-## 2. Install Dependencies {#install-dependencies .unnumbered}
+## 2. Install Dependencies
 
 Use `pip` to install the required libraries:
 
     pip install -r requirements.txt
 
-## 3. Configure Cloud Credentials {#configure-cloud-credentials .unnumbered}
+## 3. Configure Cloud Credentials
 
 Set up your Google Cloud credentials and update the JDBC connection
 properties (user, password, URL) in each script as needed.
 
-## 4. Run the Preprocessing Scripts {#run-the-preprocessing-scripts .unnumbered}
+## 4. Run the Preprocessing Scripts
 
     spark-submit src/shooting_incidents_preprocess.py
     spark-submit src/sqf_preprocess.py
     spark-submit src/use_of_force_preprocess.py
 
-## 5. Perform Data Analysis {#perform-data-analysis .unnumbered}
+## 5. Perform Data Analysis
 
 Run the analysis scripts to generate visualizations:
 
@@ -222,13 +220,13 @@ Run the analysis scripts to generate visualizations:
     spark-submit src/sqf_analysis.py
     spark-submit src/use_of_force_analysis.py
 
-## 6. Run the Machine Learning Pipeline {#run-the-machine-learning-pipeline .unnumbered}
+## 6. Run the Machine Learning Pipeline
 
 Train and save the model:
 
     spark-submit src/sqf_ml.py
 
-## 7. View Visualizations {#view-visualizations .unnumbered}
+## 7. View Visualizations
 
 Access your GCS bucket to view the saved plots and interactive maps.
 
